@@ -1,2 +1,1 @@
-/*eslint-disable*/
-console.log("hi");
+(()=>{"use strict";const t=new class{constructor(t){this.length=t,this.hits=0}hit(){this.hits++}isSunk(){return this.hits===this.length}}(5);console.log(t.length)})();
