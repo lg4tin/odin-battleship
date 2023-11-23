@@ -32,13 +32,13 @@ export class GameBoard {
     let ship = new Ship(length);
     this.ships.push(ship);
     this.getBoard()[x][y].ship = true;
-    if (dir === 'up') {
+    if (dir == 'up') {
       //All spaces in between will need to be taken
       for (let i = x; i < length + x; i++) {
-        this.getBoard()[x][i].ship = ship;
+        this.getBoard()[x][i + 1].ship = ship;
       }
     } else {
-      for (let i = y; i < length + y; i++) {
+      for (let i = x; i < length + x; i++) {
         this.getBoard()[i][y].ship = ship;
       }
     }

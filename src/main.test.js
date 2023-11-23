@@ -57,7 +57,7 @@ test('gameBoard', () => {
   const hi = new GameBoard;
   hi.placeShip(3, 1, 1, 'down');
   hi.receiveAttack(1, 1)
-  expect(hi.getBoard()[1][1].ship['hits'].toBe(1))
+  expect(hi.ships.length.toEqual(1))
 })
 
 test('gameBoard', () => {

@@ -1,32 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1700703781746" clover="3.2.0">
-  <project timestamp="1700703781746" name="All files">
-    <metrics statements="28" coveredstatements="26" conditionals="12" coveredconditionals="11" methods="9" coveredmethods="8" elements="49" coveredelements="45" complexity="0" loc="28" ncloc="28" packages="1" files="2" classes="2"/>
+<coverage generated="1700704419949" clover="3.2.0">
+  <project timestamp="1700704419949" name="All files">
+    <metrics statements="35" coveredstatements="28" conditionals="14" coveredconditionals="11" methods="10" coveredmethods="8" elements="59" coveredelements="47" complexity="0" loc="35" ncloc="35" packages="1" files="2" classes="2"/>
     <file name="gameboard.js" path="/home/lg4tin/repos/odin-battleship/src/gameboard.js">
-      <metrics statements="23" coveredstatements="22" conditionals="10" coveredconditionals="10" methods="6" coveredmethods="5"/>
+      <metrics statements="30" coveredstatements="24" conditionals="12" coveredconditionals="10" methods="7" coveredmethods="5"/>
       <line num="6" count="7" type="stmt"/>
       <line num="7" count="7" type="stmt"/>
-      <line num="11" count="7" type="stmt"/>
+      <line num="8" count="7" type="stmt"/>
       <line num="12" count="7" type="stmt"/>
-      <line num="13" count="70" type="stmt"/>
+      <line num="13" count="7" type="stmt"/>
       <line num="14" count="70" type="stmt"/>
-      <line num="15" count="700" type="stmt"/>
-      <line num="18" count="7" type="stmt"/>
-      <line num="22" count="42" type="stmt"/>
-      <line num="26" count="0" type="stmt"/>
-      <line num="30" count="6" type="cond" truecount="6" falsecount="0"/>
-      <line num="31" count="5" type="stmt"/>
+      <line num="15" count="70" type="stmt"/>
+      <line num="16" count="700" type="stmt"/>
+      <line num="19" count="7" type="stmt"/>
+      <line num="23" count="41" type="stmt"/>
+      <line num="27" count="0" type="stmt"/>
+      <line num="31" count="6" type="cond" truecount="6" falsecount="0"/>
       <line num="32" count="5" type="stmt"/>
-      <line num="33" count="5" type="cond" truecount="2" falsecount="0"/>
-      <line num="35" count="3" type="stmt"/>
-      <line num="36" count="9" type="stmt"/>
-      <line num="39" count="2" type="stmt"/>
-      <line num="40" count="7" type="stmt"/>
-      <line num="46" count="3" type="cond" truecount="2" falsecount="0"/>
-      <line num="47" count="2" type="stmt"/>
-      <line num="48" count="2" type="stmt"/>
-      <line num="50" count="1" type="stmt"/>
-      <line num="51" count="1" type="stmt"/>
+      <line num="33" count="5" type="stmt"/>
+      <line num="34" count="5" type="stmt"/>
+      <line num="35" count="5" type="cond" truecount="2" falsecount="0"/>
+      <line num="37" count="3" type="stmt"/>
+      <line num="38" count="9" type="stmt"/>
+      <line num="41" count="2" type="stmt"/>
+      <line num="42" count="7" type="stmt"/>
+      <line num="48" count="3" type="cond" truecount="2" falsecount="0"/>
+      <line num="49" count="2" type="stmt"/>
+      <line num="50" count="2" type="stmt"/>
+      <line num="52" count="1" type="stmt"/>
+      <line num="53" count="1" type="stmt"/>
+      <line num="58" count="0" type="stmt"/>
+      <line num="59" count="0" type="stmt"/>
+      <line num="60" count="0" type="cond" truecount="0" falsecount="2"/>
+      <line num="61" count="0" type="stmt"/>
+      <line num="64" count="0" type="stmt"/>
     </file>
     <file name="ship.js" path="/home/lg4tin/repos/odin-battleship/src/ship.js">
       <metrics statements="5" coveredstatements="4" conditionals="2" coveredconditionals="1" methods="3" coveredmethods="3"/>
