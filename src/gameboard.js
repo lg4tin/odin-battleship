@@ -4,6 +4,7 @@ import { Ship } from "./ship.js";
 export class GameBoard {
   constructor() {
     this.missedAttacks = [];
+    this.ships = [];
     this.board = this.createBoard();
   }
 
@@ -29,6 +30,7 @@ export class GameBoard {
   placeShip(length, x, y, dir) {
     if (x < 0 || x > 9 || y < 0 || y > 9) return;
     let ship = new Ship(length);
+    this.ships.push(ship);
     this.getBoard()[x][y].ship = true;
     if (dir === 'up') {
       //All spaces in between will need to be taken
@@ -45,6 +47,20 @@ export class GameBoard {
   receiveAttack(x, y) {
     if (this.getBoard()[x][y].ship) {
       this.getBoard()[x][y].ship.hit();
+      this.getBoard()[x][y].hit = true;
+    } else {
+      this.missedAttacks.push([x,y]);
+      this.getBoard()[x][y].hit = 'miss';
     }
+  }
+
+  allShipsSunk() {
+    let allSunk = true;
+    for (let element of this.ships) {
+      if (!element.isSunk()) {
+        allSunk = false;
+      }
+    }
+    return allSunk;
   }
 }

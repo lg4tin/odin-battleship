@@ -52,3 +52,25 @@ test('gameBoard', () => {
   expect(hi.getBoard()[3][1].ship).toEqual(null);
   expect(hi.getBoard()[4][1].ship).toEqual(null);
 })
+
+test('gameBoard', () => {
+  const hi = new GameBoard;
+  hi.placeShip(3, 1, 1, 'down');
+  hi.receiveAttack(1, 1)
+  expect(hi.getBoard()[1][1].ship['hits'].toBe(1))
+})
+
+test('gameBoard', () => {
+  const hi = new GameBoard;
+  hi.placeShip(3, 1, 1, 'up');
+  hi.receiveAttack(1, 1)
+  expect(hi.getBoard()[1][1].hit.toBe(true))
+})
+
+test('gameBoard', () => {
+  const hi = new GameBoard;
+  hi.placeShip(3, 1, 1, 'up');
+  hi.receiveAttack(1, 9)
+  // expect(hi.getBoard()[1][9].hit.toEqual('miss'));
+  expect(hi.missedAttacks.length.toEqual(1))
+})
