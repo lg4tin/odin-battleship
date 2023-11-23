@@ -29,8 +29,17 @@ test('gameBoard', () => {
 
 test('gameBoard', () => {
   const hi = new GameBoard;
-  hi.placeShip(3, [1,1], [1,3])
+  hi.placeShip(3, 1, 1, 'up')
   expect(hi.getBoard()[1][1].ship).toEqual(true);
   expect(hi.getBoard()[1][2].ship).toEqual(true);
   expect(hi.getBoard()[1][3].ship).toEqual(true);
+})
+
+test('gameBoard', () => {
+  const hi = new GameBoard;
+  hi.placeShip(4, 1, 1, 'down')
+  expect(hi.getBoard()[1][1].ship).toEqual(true);
+  expect(hi.getBoard()[2][1].ship).toEqual(true);
+  expect(hi.getBoard()[3][1].ship).toEqual(true);
+  expect(hi.getBoard()[4][1].ship).toEqual(true);
 })

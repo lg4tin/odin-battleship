@@ -5,5 +5,5 @@ const ship1 = new Ship(5);
 
 console.log(ship1.length)
 const game = new GameBoard;
-game.placeShip(3, [1, 1], [1, 3]);
+game.placeShip(3, 1, 1, 'sideways');
 console.log(game.getBoard())

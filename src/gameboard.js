@@ -26,15 +26,19 @@ export class GameBoard {
     return this.board[x][y];
   }
 
-  placeShip(length, x, y) {
+  placeShip(length, x, y, dir) {
     let ship = new Ship(length);
-    this.getBoard()[x[0]][x[1]].ship = true;
-    this.getBoard()[y[0]][y[1]].ship = true;
-    if (x[0] === y[0]) {
+    // this.getBoard()[x[0]][x[1]].ship = true;
+    // this.getBoard()[y[0]][y[1]].ship = true;
+    this.getBoard()[x][y].ship = true;
+    if (dir === 'up') {
       //All spaces in between will need to be taken
-      let l = y - x > 0 ? y - x : x - y;
-      for (let i = 0; i < l.length; i++) {
-        this.getBoard()[x[0]][x[1 + i]].ship = true;
+      for (let i = x; i < length + x; i++) {
+        this.getBoard()[x][i].ship = true;
+      }
+    } else {
+      for (let i = y; i < length + y; i++) {
+        this.getBoard()[i][y].ship = true;
       }
     }
   } 
