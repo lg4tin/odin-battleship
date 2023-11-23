@@ -27,19 +27,24 @@ export class GameBoard {
   }
 
   placeShip(length, x, y, dir) {
+    if (x < 0 || x > 9 || y < 0 || y > 9) return;
     let ship = new Ship(length);
-    // this.getBoard()[x[0]][x[1]].ship = true;
-    // this.getBoard()[y[0]][y[1]].ship = true;
     this.getBoard()[x][y].ship = true;
     if (dir === 'up') {
       //All spaces in between will need to be taken
       for (let i = x; i < length + x; i++) {
-        this.getBoard()[x][i].ship = true;
+        this.getBoard()[x][i].ship = ship;
       }
     } else {
       for (let i = y; i < length + y; i++) {
-        this.getBoard()[i][y].ship = true;
+        this.getBoard()[i][y].ship = ship;
       }
     }
-  } 
+  }
+
+  receiveAttack(x, y) {
+    if (this.getBoard()[x][y].ship) {
+      this.getBoard()[x][y].ship.hit();
+    }
+  }
 }
