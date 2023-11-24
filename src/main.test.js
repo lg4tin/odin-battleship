@@ -2,23 +2,26 @@
 import { Ship } from "./ship.js";
 import { GameBoard } from "./gameboard.js";
 
-test('ship is hit', () => {
-  let a = new Ship(5);
-  expect(a.length).toEqual(5);
-});
 
-test('ship is hit', () => {
-  let a = new Ship(3);
-  a.hit()
-  expect(a.hits).toEqual(1);
-});
+  test('ship is hit', () => {
+    let a = new Ship(5);
+    expect(a.length).toEqual(5);
+  });
+  
+  test('ship is hit', () => {
+    let a = new Ship(3);
+    a.hit()
+    expect(a.hits).toEqual(1);
+  });
+  
+  test('ship is hit', () => {
+    let a = new Ship(2);
+    a.hit()
+    a.hit()
+    expect(a.isSunk()).toBe(true);
+  });  
 
-test('ship is hit', () => {
-  let a = new Ship(2);
-  a.hit()
-  a.hit()
-  expect(a.isSunk()).toBe(true);
-});
+
 
 /////////
 
@@ -71,6 +74,6 @@ test('gameBoard', () => {
   const hi = new GameBoard;
   hi.placeShip(3, 1, 1, 'up');
   hi.receiveAttack(1, 9)
-  // expect(hi.getBoard()[1][9].hit.toEqual('miss'));
+  expect(hi.getBoard()[1][9].hit.toEqual('miss'));
   expect(hi.missedAttacks.length.toEqual(1))
 })

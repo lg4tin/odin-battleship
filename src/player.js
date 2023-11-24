@@ -6,10 +6,10 @@ export class Player {
     this.turn = true;
   }
 
-  attack(x, y, board) {
+  attack(x, y, enemyBoard) {
     if (this.turn === true) {
-      board.receiveAttack(x, y);
-      // this.turn = false;
+      enemyBoard.receiveAttack(x, y);
+      this.turn = false;
     }
   }
 }

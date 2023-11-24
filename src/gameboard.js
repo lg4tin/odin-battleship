@@ -31,7 +31,7 @@ export class GameBoard {
     if (x < 0 || x > 9 || y < 0 || y > 9) return;
     let ship = new Ship(length);
     this.ships.push(ship);
-    this.getBoard()[x][y].ship = true;
+    // this.getBoard()[x][y].ship = true;
     if (dir == 'up') {
       //All spaces in between will need to be taken
       for (let i = x; i < length + x; i++) {

@@ -2,18 +2,22 @@
 import { Ship } from "./ship.js"
 import { GameBoard } from "./gameboard.js"
 import { Player } from "./player.js"
-const ship1 = new Ship(5);
+import { AI } from "./ai.js"
 
-console.log(ship1.length)
-const game = new GameBoard;
-game.placeShip(4, 5, 6, 'up');
-game.placeShip(2, 1, 4, 'down')
-const loois = new Player;
-loois.attack(5,5,game)
-loois.attack(5,6,game)
-loois.attack(5,7,game)
-loois.attack(5,8,game)
 
-console.log(game.getBoard())
-console.log(game.allShipsSunk())
-console.log(game.ships)
+
+const loois = new Player('louis');
+const computer = new AI('computer');
+
+const looisGameBoard = new GameBoard();
+const computerGameBoard = new GameBoard();
+
+computerGameBoard.placeShip(3, 1, 1, 'up');
+computerGameBoard.placeShip(2, 5, 6, 'up');
+computerGameBoard.placeShip(1, 8, 6, 'down');
+
+loois.attack(1,2,computerGameBoard)
+
+console.log(computerGameBoard.getBoard())
+console.log(computerGameBoard.allShipsSunk())
+console.log(computerGameBoard.ships)
